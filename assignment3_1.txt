@@ -1,0 +1,14 @@
+1. How many vowels are there in the names of USA States?
+   Ans:
+     >states<-state.name
+     >b <- gsub("[^aeiouAEIOU]","C",states)
+     >b <- gsub("[^C]","V",b)
+     >h<-data.frame(b)
+     >h$number.vowles<-str_count(h$b,"V")
+     >h$states<-data.frame(states)
+     >h
+
+
+2. Visualize the vowels distribution.
+    Ans:
+     >plot(h$number.vowles,type="o",col="red",xlab="number of states",ylab="number of vowles",main="vowles in states")
